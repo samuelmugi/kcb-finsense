@@ -1,0 +1,31 @@
+spring:
+    application:
+        name: mugi_27328670
+    port: 8090
+    security:
+        user:
+            name: user
+            password: password
+            roles: USER
+
+    datasource:
+        url: jdbc:h2:mem:testdb
+        driver-class-name: org.h2.Driver
+        username: sa
+        password:
+    h2:
+        console:
+            enabled: true
+            path: /h2-console
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+        database-platform: org.hibernate.dialect.H2Dialect
+    sql:
+        init:
+            platform: h2
+
+    mvc:
+        pathmatch:
+            matching-strategy: ant_path_matcher
